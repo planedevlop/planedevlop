@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi" />
+	<title>PLANE</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+		* {margin:0; padding:0;}
+		body {background-color:#fff; font-family:"맑은 고딕", san-serif; padding:20px;}
+		caption {display:none; font-size:0; line-height:0; height:0; width:0;}
+		h1 {font-size:24px; margin-bottom:10px;}
+		.note {overflow:hidden; background-color:#eee; border:2px dashed #666; margin-bottom:20px; padding:10px;}
+		.note ul {overflow:hidden; padding-left:15px;}
+		.note ul li {list-style:unset; font-size:12px; line-height:1.5em;}
+
+		.status {overflow:hidden; margin-bottom:10px;}
+		.status {overflow:hidden;}
+		.status li {float:left; list-style:none; margin-left:5px;}
+		.status li:first-child {margin-left:0;}
+		.status li a {display:block; font-size:11px; text-decoration:none; padding-right:5px; padding-left:5px; height:18px;}
+		.status li a:hover {background-color:#dfb8b6; color:#fff;}
+
+		.btn-box {margin:20px 0;}
+		.btn-box a {padding:3px 5px;border:1px solid #ddd;text-decoration:none;color:#333;font-size:13px;}
+		.btn-box a:focus ,
+		.btn-box a:hover {background:#dfd;}
+
+		section {overflow:hidden;}
+		table {width:100%; border-collapse:collapse; table-layout:fixed;}
+		th, td {word-break:break-all;}
+		tbody .end td {background-color:#ddd;}
+		tbody .del td {background-color:#999;text-decoration:line-through;}
+		tbody .ing td {background-color:#ffd;}
+		tbody .caution td{background-color:#efdbcd;}
+		tbody .modify td {background-color:#e8e9f6;}
+		thead th {background-color:#dcdcdc; color:#333; border:1px solid #666; font-size:12px; padding-top:5px; padding-bottom:5px;}
+		tbody td {border:1px solid #666; font-size:12px; padding:3px 6px;}
+		tbody td.start {color:#ff6028; font-weight:bold;}
+		tbody td.kd{text-align: center;}
+		tbody td.name {color:#555;}
+		tbody td.end {color:#0f8ce4; font-weight:bold;}
+		tbody td.status {color:#0f8ce4; font-weight:bold;}
+		tbody td.qna p {color:#999}
+		tbody .modify td.qna p:last-child {color:#666; font-weight:bold;}
+		tbody .center {text-align:center; padding-left:0;}
+		tbody .depth01 {font-weight:bold; }
+		tbody .due{color:#a0a0a0; text-align:left; padding-left:10px}
+		tbody .due p{border-top:2px solid #a0a0a0; padding:5px;}
+		tbody .due p:first-child{border-top:0}
+		tbody a {text-decoration:none;}
+		tbody a:hover {text-decoration:underline;}
+		td.link{cursor:pointer;}
+		td.link:hover { font-weight:700}
+		td.guide_link{cursor:pointer;}
+		td.common_link{cursor:pointer;}
+		/* MOBILE */
+		@media screen and (max-width:768px){
+			body {padding:10px;}
+			h1 {font-size:16px;}
+			.note {display:none; overflow:hidden; line-height:0; height:0; width:0;}
+			table tbody tr td {font-size:13px;}
+		}
+
+		/* MENU:HOVER_COLOR */
+		table tbody tr.menu01:hover td {background-color:#A7EEFF;}
+		table tbody tr.menu02:hover td {background-color:#9DF0E1;}
+		table tbody tr.menu03:hover td {background-color:#D2FFD2;}
+		table tbody tr.menu04:hover td {background-color:#FFD4DF;}
+		table tbody tr.menu05:hover td {background-color:#FFDCFF;}
+		table tbody tr.menu06:hover td {background-color:#FAFA96;}
+		table tbody tr.menu07:hover td {background-color:#FFC846;}
+		table tbody tr.menu08:hover td {background-color:#FFE4B5;}
+		table tbody tr.menu09:hover td {background-color:#A5E3E6;}
+		table tbody tr.menu10:hover td {background-color:#d4e4f5;}
+		table tbody tr.menu11:hover td {background-color:#41ffb7;}
+		table tbody tr.menu12:hover td {background-color:#f288af;}
+
+		table tbody tr.menu00:hover td {background-color:#eddfaf;}		
+		table tbody tr.menu99:hover td {background-color:#7fb2f0;}
+				
+
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$('.link').on('click', function(){
+                var hostname = window.location.hostname;
+                var url = "";
+				
+                url = "src/";
+                
+                var tg = $(this).text() + '.html';
+                if(tg == ''){
+                }else{
+                    window.open(url + tg+'','_blank')
+                }
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<h1>PLANE</h1>
+    <div class="note">
+    	<ul>
+            <li>DATE : 2025-02-21</li>
+			<li></li>
+        </ul>
+    </div>
+	<section> 
+		<table>
+			<colgroup>
+				<col width="8%" />
+					<col width="10%" />
+					<col width="12%" />
+					<col width="10%" />
+					<col width="8%" />
+					<col width="12%" />
+					<col width="*" />
+			</colgroup>
+			<caption>파일리스트</caption>
+			<thead>
+				<tr>
+					<th scope="col">1DEPTH</th>
+					<th scope="col">2DEPTH</th>
+          			<th scope="col">3DEPTH</th>
+					<th scope="col">4DEPTH</th>
+					<th scope="col">TYPE</th>
+					<th scope="col" style="background:#39F">LINK</th>
+					<th scope="col">NOTICE</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- status 예제 -->
+				<tr class="menu01" style="display: none;"><!-- class="menu01~menu13", 작업완료 후 class="end" 추가 -->
+					<td class="depth01">가이드</td>
+					<td>요소 가이드</td>
+					<td></td>
+          			<td></td>
+					<td></td>
+					<td class="link">guide</td><!-- link -->
+					<td class="qna"></td>
+				</tr>
+				<!-- //status 예제 --> 
+
+                <tr class="menu01">
+					<td class="depth01">　</td>
+					<td></td>
+					<td></td>
+          			<td></td>
+					<td></td>
+					<td class="link"></td><!-- link -->
+					<td class="qna"></td>
+				</tr>
+                
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>
